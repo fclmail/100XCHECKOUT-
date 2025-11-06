@@ -1,212 +1,211 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Checkout Page</title>
-    <link rel="icon" type="image/x-icon" href="100XPIC.svg">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: black;
-            color: #00bfff;
-            margin: 0;
-            padding: 20px;
-            overflow-y: scroll;
-        }
-        .container {
-            max-width: 600px;
-            margin: auto;
-            padding: 20px;
-            background: black;
-            border: 3px solid #00bfff;
-            border-radius: 8px;
-            box-shadow: 0 0 15px rgba(0, 191, 255, 0.7);
-        }
-        h1 {
-            text-align: center;
-            text-decoration: underline;
-            text-transform: uppercase;
-            font-size: 36px;
-            letter-spacing: 2px;
-        }
-        .gif-placeholder {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .dropdown-container {
-            text-align: center;
-            margin-bottom: 20px;
-            font-size: 22px;
-        }
-        select {
-            padding: 12px;
-            margin-left: 10px;
-            border: 3px solid #00bfff;
-            border-radius: 6px;
-            font-size: 20px;
-            color: #00bfff;
-            background: black;
-            width: 200px;
-        }
-        .result {
-            font-weight: bold;
-            text-align: center;
-            padding: 20px;
-            margin-top: 25px;
-            border: 3px solid #00bfff;
-            border-radius: 6px;
-            font-size: 26px;
-            background-color: rgba(0, 0, 0, 0.8);
-            box-shadow: 0 0 20px rgba(0, 191, 255, 0.6);
-        }
-        .highlight {
-            color: #ff00ff;
-            font-size: 38px;
-            font-weight: bold;
-            text-shadow: 0 0 20px #ff00ff, 0 0 30px #ff66ff;
-            animation: flash 1s infinite alternate;
-        }
-        @keyframes flash {
-            from { opacity: 1; }
-            to { opacity: 0.4; }
-        }
-        .ghx-container {
-            display: flex;
-            justify-content: center;
-            text-align: center;
-            margin-top: 10px;
-            font-size: 22px;
-        }
-        input {
-            padding: 12px;
-            margin-left: 10px;
-            border: 3px solid #00bfff;
-            border-radius: 4px;
-            font-size: 20px;
-            color: #00bfff;
-            background: black;
-            width: 160px;
-        }
-        .offer {
-            text-align: center;
-            font-size: 22px;
-            margin-bottom: 20px;
-            font-weight: bold;
-            color: #ffff66;
-            text-shadow: 0 0 10px #ffff66;
-        }
-        #timer {
-            background-color: black;
-            color: #00ff00;
-            font-weight: bold;
-            text-align: center;
-            font-size: 26px;
-            border: 3px solid #00ff00;
-            padding: 10px;
-            border-radius: 6px;
-            margin-bottom: 20px;
-            box-shadow: 0 0 10px #00ff00;
-        }
-        .payment-button {
-            background-color: black;
-            color: #00ff00;
-            border: 3px solid #00ff00;
-            padding: 14px;
-            margin: 12px 0;
-            font-size: 22px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: background-color 0.3s, transform 0.3s;
-            border-radius: 6px;
-            width: 100%;
-        }
-        .payment-button:hover {
-            background-color: green;
-            color: black;
-            transform: scale(1.05);
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout Page</title>
+    <link rel="icon" type="image/x-icon" href="100XPIC.svg">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: black;
+            color: #00bfff;
+            margin: 0;
+            padding: 20px;
+            overflow-y: scroll;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            background: black;
+            border: 3px solid #00bfff;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 191, 255, 0.7);
+        }
+        h1 {
+            text-align: center;
+            text-decoration: underline;
+            text-transform: uppercase;
+            font-size: 36px;
+            letter-spacing: 2px;
+        }
+        .gif-placeholder {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .dropdown-container {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 22px;
+        }
+        select {
+            padding: 12px;
+            margin-left: 10px;
+            border: 3px solid #00bfff;
+            border-radius: 6px;
+            font-size: 20px;
+            color: #00bfff;
+            background: black;
+            width: 200px;
+        }
+        .result {
+            font-weight: bold;
+            text-align: center;
+            padding: 20px;
+            margin-top: 25px;
+            border: 3px solid #00bfff;
+            border-radius: 6px;
+            font-size: 26px;
+            background-color: rgba(0, 0, 0, 0.8);
+            box-shadow: 0 0 20px rgba(0, 191, 255, 0.6);
+        }
+        .highlight {
+            color: #ff00ff;
+            font-size: 38px;
+            font-weight: bold;
+            text-shadow: 0 0 20px #ff00ff, 0 0 30px #ff66ff;
+            animation: flash 1s infinite alternate;
+        }
+        @keyframes flash {
+            from { opacity: 1; }
+            to { opacity: 0.4; }
+        }
+        .ghx-container {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            margin-top: 10px;
+            font-size: 22px;
+        }
+        input {
+            padding: 12px;
+            margin-left: 10px;
+            border: 3px solid #00bfff;
+            border-radius: 4px;
+            font-size: 20px;
+            color: #00bfff;
+            background: black;
+            width: 160px;
+        }
+        .offer {
+            text-align: center;
+            font-size: 22px;
+            margin-bottom: 20px;
+            font-weight: bold;
+            color: #ffff66;
+            text-shadow: 0 0 10px #ffff66;
+        }
+        #timer {
+            background-color: black;
+            color: #00ff00;
+            font-weight: bold;
+            text-align: center;
+            font-size: 26px;
+            border: 3px solid #00ff00;
+            padding: 10px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            box-shadow: 0 0 10px #00ff00;
+        }
+        .payment-button {
+            background-color: black;
+            color: #00ff00;
+            border: 3px solid #00ff00;
+            padding: 14px;
+            margin: 12px 0;
+            font-size: 22px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+            border-radius: 6px;
+            width: 100%;
+        }
+        .payment-button:hover {
+            background-color: green;
+            color: black;
+            transform: scale(1.05);
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <div class="gif-placeholder">
-            <img src="100xcheckout.gif" alt="100xcheckout" width="100%" />
-        </div>
+    <div class="container">
+        <div class="gif-placeholder">
+            <img src="100xcheckout.gif" alt="100xcheckout" width="100%" />
+        </div>
 
-        <h1>100 X CHECKOUT</h1>
+        <h1>100 X CHECKOUT</h1>
 
-        <div class="offer">
-            🌟 Limited Time Offer! Ends November 30, 2025 🌟
-        </div>
+        <div class="offer">
+            🌟 Limited Time Offer! Ends November 30, 2025 🌟
+        </div>
 
-        <div id="timer"></div>
+        <div id="timer"></div>
 
-        <div class="dropdown-container">
-            <label for="amount">✅ 1. SELECT $ PAY AMOUNT:</label>
-            <select id="amount" onchange="calculateGHX()">
-                <script>
-                    for (let i = 1; i <= 100; i++) {
-                        document.write(`<option value="${i}">${i}</option>`);
-                    }
-                    for (let i = 1000; i <= 10000; i += 1000) {
-                        document.write(`<option value="${i}">${i}</option>`);
-                    }
-                    for (let i = 20000; i <= 100000; i += 10000) {
-                        document.write(`<option value="${i}">${i}</option>`);
-                    }
-                </script>
-            </select>
-        </div>
+        <div class="dropdown-container">
+            <label for="amount">✅ 1. SELECT $ PAY AMOUNT:</label>
+            <select id="amount" onchange="calculateGHX()">
+                <script>
+                    for (let i = 1; i <= 100; i++) {
+                        document.write(`<option value="${i}">${i}</option>`);
+                    }
+                    for (let i = 1000; i <= 10000; i += 1000) {
+                        document.write(`<option value="${i}">${i}</option>`);
+                    }
+                    for (let i = 20000; i <= 100000; i += 10000) {
+                        document.write(`<option value="${i}">${i}</option>`);
+                    }
+                </script>
+            </select>
+        </div>
 
-        <div class="ghx-container">
-            <label for="ghx">✅ 2. GHX MULTIPLIER <br/> (GENERATE HUNDRED TIMES) <br/>ALGORITHM INSTANTLY <br/>MULTIPLIES 100 TIMES:</label>
-            <input type="text" id="ghx" value="0" readonly>
-        </div>
+        <div class="ghx-container">
+            <label for="ghx">✅ 2. GHX MULTIPLIER <br/> (GENERATE HUNDRED TIMES) <br/>ALGORITHM INSTANTLY <br/>MULTIPLIES 100 TIMES:</label>
+            <input type="text" id="ghx" value="0" readonly>
+        </div>
 
-        <div class="result">
-            ✅ 🎉😀 3. <span class="highlight">SUCCESS YOU GET AN EXTRA LARGE AMOUNT $:</span> <span id="result" class="highlight">0</span>
-        </div>
+        <div class="result">
+            ✅ 🎉😀 3. <span class="highlight">SUCCESS YOU GET AN EXTRA LARGE AMOUNT $:</span> <span id="result" class="highlight">0</span>
+        </div>
 
-        <button id="payButtonMetaMask" class="payment-button" onclick="payWithMetaMask()">💰 Click to Pay with MetaMask</button>
-        <button id="payButtonPayPal" class="payment-button" onclick="payWithPayPal()">💳 Click to Pay with PayPal/Visa/MC</button>
-    </div>
+        <button id="payButtonMetaMask" class="payment-button" onclick="payWithMetaMask()">💰 Click to Pay with MetaMask</button>
+        <button id="payButtonPayPal" class="payment-button" onclick="payWithPayPal()">💳 Click to Pay with PayPal/Visa/MC</button>
+    </div>
 
-    <script>
-        function calculateGHX() {
-            const amount = parseInt(document.getElementById("amount").value);
-            const ghx = amount * 100;
-            document.getElementById("ghx").value = ghx;
-            document.getElementById("result").innerText = ghx;
-        }
+    <script>
+        function calculateGHX() {
+            const amount = parseInt(document.getElementById("amount").value);
+            const ghx = amount * 100;
+            document.getElementById("ghx").value = ghx;
+            document.getElementById("result").innerText = ghx;
+        }
 
-        function startTimer() {
-            const endDate = new Date("November 30, 2025 10:00:00").getTime();
-            const timerElement = document.getElementById("timer");
-            const interval = setInterval(() => {
-                const now = new Date().getTime();
-                const distance = endDate - now;
-                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-                const milliseconds = Math.floor(distance % 1000);
-                timerElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s ${milliseconds}ms`;
-                if (distance < 0) {
-                    clearInterval(interval);
-                    timerElement.innerHTML = "Offer has ended!";
-                }
-            }, 1);
-        }
-        startTimer();
+        function startTimer() {
+            const endDate = new Date("November 30, 2025 10:00:00").getTime();
+            const timerElement = document.getElementById("timer");
+            const interval = setInterval(() => {
+                const now = new Date().getTime();
+                const distance = endDate - now;
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                const milliseconds = Math.floor(distance % 1000);
+                timerElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s ${milliseconds}ms`;
+                if (distance < 0) {
+                    clearInterval(interval);
+                    timerElement.innerHTML = "Offer has ended!";
+                }
+            }, 1);
+        }
+        startTimer();
 
-        function payWithMetaMask() {
-            alert("Processing payment with MetaMask...");
-        }
-        function payWithPayPal() {
-            alert("Processing payment with PayPal/Visa/MC...");
-        }
-    </script>
+        function payWithMetaMask() {
+            alert("Processing payment with MetaMask...");
+        }
+        function payWithPayPal() {
+            alert("Processing payment with PayPal/Visa/MC...");
+        }
+    </script>
 </body>
-</html> 
-
+</html> 
